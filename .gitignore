@@ -1,0 +1,14 @@
+# dependencies
+/node_modules
+
+# logs
+npm-debug.log*
+
+# cache
+.parcel-cache
+
+# misc
+.DS_Store
+
+# dist
+/dist
