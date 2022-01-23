@@ -1,0 +1,52 @@
+.rating {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    .rating-input {
+        display: flex;
+        flex-direction: row;
+        width: 80px;
+
+        .half-value {
+            height: 20px;
+            width: 8px;
+            background-image: url('../images/rating.png');
+            background-size: 8px 20px;
+            opacity: 0.4;
+            cursor: pointer;
+
+            &:nth-child(even) {
+                background-image: url('../images/rating-even.png');
+            }
+
+            &.hover {
+                opacity: 1;
+                background-image: url('../images/rating-selected.png');
+
+                &:nth-child(even) {
+                    background-image: url('../images/rating-selected-even.png');
+                }
+            }
+        }
+
+        &:not(:hover) {
+            .half-value.active {
+                opacity: 1;
+                background-image: url('../images/rating-selected.png');
+
+                &:nth-child(even) {
+                    background-image: url('../images/rating-selected-even.png');
+                }
+            }
+        }
+    }
+
+
+    .current-rating {
+        font-family: "PT Sans", sans-serif;
+        font-size: 16px;
+        line-height: 40px;
+        padding-left: 10px;
+    }
+}

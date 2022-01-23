@@ -9,4 +9,4 @@ export default configureStore({
     reducer: {
         wines: winesReducer
     }
-})
+});

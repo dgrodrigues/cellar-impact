@@ -1,0 +1,225 @@
+.list-container {
+    width: 100vw;
+    background-image: url("../images/wine_01.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    padding-top: 100px;
+    flex: 1;
+
+    .add-wine-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #9a0038;
+        color: white;
+        border: none;
+        font-size: 30px;
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .no-items {
+        font-family: "PT Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .list-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            input {
+                height: 35px;
+                width: 250px;
+                padding: 8px;
+                box-sizing: border-box;
+                border: 1px solid #c4cbd7;
+                border-radius: 2px;
+                font-family: "PT Sans", sans-serif;
+                font-size: 14px;
+                outline-color: #9a0038;
+            }
+
+            svg {
+                position: absolute;
+                right: 8px;
+            }
+        }
+    }
+
+
+    table {
+
+        thead {
+            td {
+                font-family: "PT Sans", sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+                padding: 20px 10px;
+            }
+
+            .header-sort {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+            }
+        }
+
+        tbody {
+
+            tr {
+                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                &:first-child {
+                    border-top: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+            }
+
+            td {
+                font-family: "PT Sans", sans-serif;
+                font-size: 14px;
+                font-weight: 400;
+                background-color: white;
+                height: 45px;
+                padding: 0 10px;
+                line-height: 45px;
+            }
+        }
+
+        .actions-col {
+            width: 90px;
+            vertical-align: middle;
+        }
+
+        .details-col {
+            width: 90px;
+        }
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-end;
+
+        .edit-btn, .delete-btn {
+            border: none;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+
+    .details-btn {
+        border: none;
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+        height: 40px;
+        font-family: "PT Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+
+.details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .details-container {
+        width: calc(100% - 30px);
+        max-width: 568px;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        padding: 20px;
+        position: relative;
+
+        .close-btn {
+            border: none;
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            cursor:pointer;
+            position: absolute;
+            right: 25px;
+            top: 25px;
+        }
+
+        .details-content {
+            max-height: calc(100vh - 150px);
+            overflow: scroll;
+        }
+
+        .detail-row {
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+
+            .detail-item {
+                width: 50%;
+
+                label {
+                    font-family: "PT Sans", sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: black;
+                    opacity: 0.4;
+                    line-height: 30px;
+                }
+
+                p {
+                    font-family: "PT Sans", sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
+
+                &.full-width {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

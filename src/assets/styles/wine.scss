@@ -1,0 +1,100 @@
+.wine-container {
+    width: 100vw;
+    background-image: url("../images/wine_02.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    padding-top: 100px;
+    flex: 1;
+
+    .return-wine-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #9a0038;
+        color: white;
+        border: none;
+        font-size: 30px;
+        position: absolute;
+        top: -25px;
+        left: -25px;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        flex: 1;
+
+        .form-group {
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            box-sizing: border-box;
+
+            label {
+                display: block;
+                width: 100%;
+                margin-bottom: 8px;
+                font-family: "PT Sans", sans-serif;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            input[type="text"], input[type="number"] {
+                width: 100%;
+                height: 40px;
+                box-sizing: border-box;
+                border: 1px solid #c4cbd7;
+                border-radius: 2px;
+                padding: 8px;
+                font-family: "PT Sans", sans-serif;
+                font-size: 16px;
+                outline-color: #9a0038;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100px;
+                box-sizing: border-box;
+                border: 1px solid #c4cbd7;
+                border-radius: 2px;
+                padding: 8px;
+                font-family: "PT Sans", sans-serif;
+                font-size: 16px;
+                outline-color: #9a0038;
+            }
+        }
+
+        .form-ations {
+            padding-right: 15px;
+            flex: 2;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            input[type="submit"] {
+                height: 40px;
+                background-color: #9a0038;
+                font-family: "PT Sans", sans-serif;
+                font-size: 16px;
+                color: white;
+                border: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 0 15px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
